@@ -1,0 +1,38 @@
+# Generated artifacts
+data/candidates_raw.csv
+data/candidates_triaged.csv
+data/search_log.jsonl
+data/triage_summary.md
+data/download_log.csv
+data/manual_retrieval_list.md
+data/deep_read_log.csv
+data/pdfs/*.pdf
+data/triage_batches/
+data/deepread_batches/
+
+notes/paper_*.md
+
+synthesis/gap_matrix.md
+synthesis/gap_candidates.md
+synthesis/indicator_assessment.md
+synthesis/shortlist.md
+synthesis/positioning_statement.md
+synthesis/prisma_flow.md
+synthesis/sources.md
+synthesis/sources.bib
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,1 @@
+See `AGENTS.md` for the full pipeline contract. This file exists so Claude Code finds project instructions at the conventional path. The contract is identical regardless of which agentic tool runs the pipeline.
