@@ -123,6 +123,8 @@ Makefile                 Stage runners and by-hand checklists.
 
 The Python helper scripts use only `requests`, `feedparser`, and `pyyaml`. Install with `pip install requests feedparser pyyaml`. The scripts are runnable standalone without any AI tool.
 
+Optional: `scripts/md_to_docx.py` converts any Markdown file into a valid Word document (`.docx`). It uses only the Python standard library, so no extra install is needed. Run `make docx IN=path/to/file.md` (optionally `OUT=path/to/file.docx`). Use this whenever you need a Word document: writing Markdown or plain text to a `*.docx` file produces a corrupt document that Word refuses to open.
+
 The agent definitions in `agents/` are markdown files. They make no assumption about which AI you use. Where parallelism matters (stage 4), the file says so and gives a sequential fallback.
 
 ## License and attribution

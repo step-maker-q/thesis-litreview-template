@@ -11,7 +11,8 @@
 .PHONY: help search manual-triage download deep_read synthesis quality_filter \
         positioning bibliography validate validate-strict clean \
         manual-search manual-triage-howto manual-download manual-deepread \
-        manual-synthesis manual-quality manual-positioning
+        manual-synthesis manual-quality manual-positioning \
+        docx
 
 help:
 	@echo "Thesis Literature Review Pipeline"
@@ -85,6 +86,12 @@ manual-quality:
 
 manual-positioning:
 	@echo "Stage 7 by hand. See agents/07_positioning.md section 'Run by hand'."
+
+docx:
+	@echo "Convert a Markdown file to a valid .docx."
+	@echo "Usage: make docx IN=path/to/file.md [OUT=path/to/file.docx]"
+	@if [ -z "$(IN)" ]; then echo "ERROR: set IN=..."; exit 1; fi
+	@python scripts/md_to_docx.py "$(IN)" "$(OUT)"
 
 clean:
 	rm -f data/candidates_raw.csv data/candidates_triaged.csv
